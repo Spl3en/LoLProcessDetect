@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1393256503 source:c:\documents and settings\cyril\mes documents\github\lolprocessdetect\main.c
+	<stdio.h>
+	<stdlib.h>
+	"./Win32Tools/Win32Tools.h"
+
+1392829785 c:\documents and settings\cyril\mes documents\github\lolprocessdetect\win32tools\win32tools.h
+	<stdlib.h>
+	<windows.h>
+	<tlhelp32.h>
+	<time.h>
+	<psapi.h>
+	<wincon.h>
+	"../Ztring/Ztring.h"
+	"../Utils/Utils.h"
+
+1393256356 c:\documents and settings\cyril\mes documents\github\lolprocessdetect\ztring\ztring.h
+	<stdarg.h>
+	<string.h>
+	"../BbQueue/BbQueue.h"
+
+1391964531 c:\documents and settings\cyril\mes documents\github\lolprocessdetect\bbqueue\bbqueue.h
+	<stdio.h>
+	<stdlib.h>
+
+1391964531 c:\documents and settings\cyril\mes documents\github\lolprocessdetect\utils\utils.h
+	<windows.h>
+
+1393256034 source:c:\documents and settings\cyril\mes documents\github\lolprocessdetect\win32tools\win32tools.c
+	"Win32Tools.h"
+
+1391964531 source:c:\documents and settings\cyril\mes documents\github\lolprocessdetect\bbqueue\bbqueue.c
+	"BbQueue.h"
+
+1393256377 source:c:\documents and settings\cyril\mes documents\github\lolprocessdetect\ztring\ztring.c
+	"Ztring.h"
+
