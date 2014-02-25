@@ -7,16 +7,21 @@ get_pid_by_name (char *proc_name)
 
 	PROCESSENTRY32 pe32;
 	memset(&pe32, 0, sizeof(pe32));
+	pe32.dwSize = sizeof(PROCESSENTRY32);
 
 	HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 
-	pe32.dwSize = sizeof(PROCESSENTRY32);
-
 	if (hSnapshot == INVALID_HANDLE_VALUE)
+	{
+		warning("Unable to create a Toolhelp32 snapshot (%08X)\n", GetLastError());
 		return 0;
+	}
 
 	if (!Process32First(hSnapshot, &pe32))
+	{
+		warning("Unable to get first process (%08X)\n", GetLastError());
 		return 0;
+	}
 
 	while (Process32Next(hSnapshot, &pe32))
 	{

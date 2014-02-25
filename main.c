@@ -35,7 +35,7 @@ int main ()
 	// Get the window handle
 	HWND hwnd;
 	if ((hwnd = get_hwnd_from_title (LOL_WINDOW_NAME)) == NULL)
-		warning ("Can't find window name.");
+		warning ("Can't find window name \"" LOL_WINDOW_NAME "\".");
 	else
 		info("get_hwnd_from_title success !");
 
